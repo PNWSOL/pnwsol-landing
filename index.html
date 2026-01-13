@@ -55,20 +55,14 @@
             clip-path: polygon(0% 0%, 2% 100%, 5% 0%, 7% 100%, 10% 0%, 12% 100%, 15% 0%, 17% 100%, 20% 0%, 22% 100%, 25% 0%, 27% 100%, 30% 0%, 32% 100%, 35% 0%, 37% 100%, 40% 0%, 42% 100%, 45% 0%, 47% 100%, 50% 0%, 52% 100%, 55% 0%, 57% 100%, 60% 0%, 62% 100%, 65% 0%, 67% 100%, 70% 0%, 72% 100%, 75% 0%, 77% 100%, 80% 0%, 82% 100%, 85% 0%, 87% 100%, 90% 0%, 92% 100%, 95% 0%, 97% 100%, 100% 0%);
         }
 
-        /* LOGO SIZE - HERO (White Logo) */
+        /* LOGO SIZE - HERO (Small 220px) */
         .logo-img { max-width: 220px; height: auto; margin-bottom: 20px; transform: rotate(-2deg); filter: contrast(150%) brightness(120%); z-index: 2; }
         
         .tagline { font-size: 1.5rem; font-weight: bold; background-color: #111; color: #fff; padding: 8px 20px; transform: rotate(-2deg); display: inline-block; border: 3px solid white; box-shadow: 4px 4px 0px rgba(0,0,0,0.5); z-index: 2; }
 
         /* BUTTONS & MOBILE FIXES */
         .button-container { 
-            display: flex; 
-            gap: 25px; 
-            row-gap: 55px; /* High gap to prevent badge overlap on mobile */
-            flex-wrap: wrap; 
-            justify-content: center; 
-            margin-top: 40px; 
-            z-index: 2; 
+            display: flex; gap: 25px; row-gap: 55px; flex-wrap: wrap; justify-content: center; margin-top: 40px; z-index: 2; 
         }
         .pnw-btn { text-decoration: none; padding: 15px 30px; font-family: 'Arial Black', sans-serif; text-transform: uppercase; font-weight: bold; min-width: 180px; text-align: center; display: inline-block; transition: all 0.2s; position: relative; }
         
@@ -83,49 +77,19 @@
         }
 
         .btn-red { 
-            background: #d94e3b; 
-            color: white; 
-            border: 3px solid #d94e3b; 
-            box-shadow: 6px 6px 0px #000; 
+            background: #d94e3b; color: white; border: 3px solid #d94e3b; box-shadow: 6px 6px 0px #000; 
             animation: softPulse 2.5s infinite ease-in-out; 
         }
         .btn-red:hover { 
-            background-color: #bf3d2b; 
-            transform: translate(2px, 2px); 
-            box-shadow: 4px 4px 0px #000; 
-            animation: none; 
+            background-color: #bf3d2b; transform: translate(2px, 2px); box-shadow: 4px 4px 0px #000; animation: none; 
         }
 
         /* PRINTWORKS BADGE */
-        .printworks-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
+        .printworks-wrapper { position: relative; display: inline-block; margin-bottom: 10px; }
         .printworks-badge { 
-            position: absolute; 
-            bottom: -28px; 
-            right: -10px; 
-            background: #000; 
-            color: #fff; 
-            font-size: 11px; 
-            font-family: 'Arial Black', sans-serif; 
-            padding: 4px 12px; 
-            border: 2px solid #fff; 
-            transform: rotate(2deg); 
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.5); 
-            letter-spacing: 1.5px; 
-            white-space: nowrap; 
-            pointer-events: none; 
-            z-index: 10; 
-            transition: all 0.3s ease; 
+            position: absolute; bottom: -28px; right: -10px; background: #000; color: #fff; font-size: 11px; font-family: 'Arial Black', sans-serif; padding: 4px 12px; border: 2px solid #fff; transform: rotate(2deg); box-shadow: 4px 4px 0px rgba(0,0,0,0.5); letter-spacing: 1.5px; white-space: nowrap; pointer-events: none; z-index: 10; transition: all 0.3s ease; 
         }
-        
-        .btn-red:hover + .printworks-badge {
-            transform: rotate(0deg) translateY(2px);
-            background: #d94e3b;
-        }
+        .btn-red:hover + .printworks-badge { transform: rotate(0deg) translateY(2px); background: #d94e3b; }
 
         .btn-outline { background: transparent; color: #fff; border: 3px solid #fff; box-shadow: 6px 6px 0px rgba(255,255,255,0.3); }
         .btn-outline:hover { background: #fff; color: #000; box-shadow: 4px 4px 0px #fff; transform: translate(2px, 2px); }
@@ -135,11 +99,7 @@
         .section-header { margin-bottom: 50px; border-bottom: 3px solid #000; padding-bottom: 20px; }
         
         /* VISION LOGO SIZE - FIXED TO 80PX (SMALL) */
-        .section-header img { 
-            max-width: 80px; 
-            height: auto;
-            margin-bottom: 20px; 
-        }
+        .section-header img { max-width: 80px; height: auto; margin-bottom: 20px; }
 
         .content-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; margin-top: 0; color: #000; }
         .content-subtitle { font-size: 1.1rem; color: #000; max-width: 700px; margin: 0 auto; font-weight: bold; }
@@ -152,19 +112,9 @@
         .structure-box.non-profit h3 { color: #fff; border-bottom: 2px solid #fff; }
         .highlight { font-weight: 900; text-decoration: underline; color: #d94e3b; }
 
-        /* ROADMAP */
+        /* ROADMAP - RED STYLE RESTORED */
         .roadmap-title { 
-            font-family: 'Arial Black', sans-serif; 
-            font-size: 2rem; 
-            text-transform: uppercase; 
-            background: #d94e3b; /* UPDATED TO RED */
-            color: #fff; 
-            display: inline-block; 
-            padding: 5px 15px; 
-            margin-bottom: 30px; 
-            transform: rotate(-1deg); 
-            border: 3px solid #000; 
-            box-shadow: 6px 6px 0px #000;
+            font-family: 'Arial Black', sans-serif; font-size: 2rem; text-transform: uppercase; background: #d94e3b; color: #fff; display: inline-block; padding: 5px 15px; margin-bottom: 30px; transform: rotate(-1deg); border: 3px solid #000; box-shadow: 6px 6px 0px #000;
         }
         .phase-container { text-align: left; margin-top: 20px; border-left: 5px dashed #000; padding-left: 30px; }
         .phase-box { background-color: #fff; border: 2px solid #000; padding: 20px; margin: 25px 0; }
@@ -184,11 +134,7 @@
             border: 2px solid white; text-decoration: none; transition: all 0.2s ease-in-out; 
         }
         .social-icon svg { width: 24px; height: 24px; fill: currentColor; }
-        .social-icon:hover { 
-            color: #d94e3b; 
-            border-color: #d94e3b; 
-            transform: scale(1.2); 
-        }
+        .social-icon:hover { color: #d94e3b; border-color: #d94e3b; transform: scale(1.2); }
         .footer-logo { max-width: 80px; margin-bottom: 20px; filter: contrast(150%); }
     </style>
     
@@ -204,18 +150,16 @@
     <div class="noise-overlay"></div>
 
     <div class="hero-container">
-        <!-- WHITE LOGO (Locked 220px) -->
+        <!-- WHITE LOGO (Small 220px) -->
         <img src="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLWhiteTrans.png" alt="PNW SOL Logo" class="logo-img">
         <div class="tagline">SERVANT OF LOVE</div>
 
         <div class="button-container">
             <a href="https://shop.pnwsol.com" class="pnw-btn btn-white">Shop Apparel</a>
-            
             <div class="printworks-wrapper">
                 <a href="https://printworks.pnwsol.com" class="pnw-btn btn-red">Custom Printing</a>
                 <div class="printworks-badge">PNW SOL PRINTWORKS</div>
             </div>
-
             <a href="#vision" class="pnw-btn btn-outline">Our Vision</a>
         </div>
         <div class="hero-tear"></div>
@@ -223,7 +167,7 @@
 
     <div id="vision" class="content-section">
         <div class="section-header">
-            <!-- BLACK LOGO (Locked 80px) -->
+            <!-- BLACK LOGO (Small 80px) -->
             <img src="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLBlackTrans.png" alt="PNW SOL Logo">
             <h2 class="content-title">Vision for the SOL Center</h2>
             <p class="content-subtitle">A MULTI-USE COMMUNITY SPACE BRINGING PEOPLE TOGETHER ACROSS GENERATIONS.</p>
@@ -269,7 +213,14 @@
             <iframe name="hiddenFrame" style="display:none;"></iframe>
             
             <form id="signup-form" action="https://01b0e990.sibforms.com/serve/MUIFACHiJnXRLLiO7mh_CmdQGNE0fTdVeqT6TcMNKLdKdzKINtopW1ZNSrwLjiATB4bxqxUK7nTas0FFFsrekxA5fcZTZLsXrP1drZXbZ_fxMNQRzweS_1bL_HWqVhT0xVk1YQ0G86VkM_a0tT4Rna5RNnutoe-5DvhEpvPiI8GBD5hOAyooPAKgUE6jZuypLGCdkoYuBpBqXfLa6Q==" method="POST" target="hiddenFrame" onsubmit="showSuccess()" style="margin-top: 20px;">
+                
+                <!-- REQUIRED FIELD NAME: EMAIL -->
                 <input type="email" name="EMAIL" placeholder="ENTER YOUR EMAIL" required style="padding: 10px; border: 3px solid #000; font-family: monospace; font-weight: bold; width: 60%; max-width: 300px;">
+                
+                <!-- HIDDEN BREVO VALIDATION FIELDS -->
+                <input type="hidden" name="locale" value="en">
+                <input type="hidden" name="html_type" value="simple">
+                
                 <button type="submit" class="newsletter-btn">Subscribe</button>
             </form>
             
