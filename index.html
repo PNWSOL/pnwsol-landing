@@ -4,37 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- THE SEO TITLE (What shows in the address field/tab) -->
+    <!-- SEO & BROWSER TAB -->
     <title>PNW SOL - Servant of Love - Longview, Washington</title>
-    
     <meta name="description" content="PNW SOL - Servant of Love. A community-driven enterprise and non-profit hub in Longview, Washington featuring custom apparel, printing services, and all-ages events.">
-    <meta name="keywords" content="PNW SOL, Servant of Love, Longview WA, screen printing Longview, PNW apparel, SOL Center, Young Hearts, custom printing Washington">
 
-    <!-- THE FAVICON (The little icon logo) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLBlackTrans.png">
 
     <!-- FONT AWESOME (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- SCHEMA MARKUP (SEO for Google Search) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PNW SOL",
-      "image": "https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLBlackTrans.png", 
-      "telephone": "360-207-1553",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1140 Vandercook Way",
-        "addressLocality": "Longview",
-        "addressRegion": "WA",
-        "postalCode": "98632",
-        "addressCountry": "US"
-      },
-      "url": "https://pnwsol.com"
-    }
-    </script>
 
     <style>
         /* RESET & BASE */
@@ -52,14 +30,8 @@
 
         /* NOISE OVERLAY */
         .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.08;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 9999; opacity: 0.08;
             background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); 
         }
 
@@ -75,133 +47,96 @@
             background-size: cover, 400px 400px, 100% 4px, cover; 
             background-position: center, 0 0, 0 0, center;
             background-blend-mode: multiply, lighten, overlay, normal;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            border-bottom: 8px solid #111;
-            position: relative;
-            box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; border-bottom: 8px solid #111; position: relative; box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
         }
 
         .hero-tear {
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 100%;
-            height: 30px;
-            background: #f4f4f4;
+            position: absolute; bottom: -15px; left: 0; width: 100%; height: 30px; background: #f4f4f4;
             clip-path: polygon(0% 0%, 2% 100%, 5% 0%, 7% 100%, 10% 0%, 12% 100%, 15% 0%, 17% 100%, 20% 0%, 22% 100%, 25% 0%, 27% 100%, 30% 0%, 32% 100%, 35% 0%, 37% 100%, 40% 0%, 42% 100%, 45% 0%, 47% 100%, 50% 0%, 52% 100%, 55% 0%, 57% 100%, 60% 0%, 62% 100%, 65% 0%, 67% 100%, 70% 0%, 72% 100%, 75% 0%, 77% 100%, 80% 0%, 82% 100%, 85% 0%, 87% 100%, 90% 0%, 92% 100%, 95% 0%, 97% 100%, 100% 0%);
         }
 
-        .logo-img {
-            max-width: 320px; 
-            height: auto;
-            margin-bottom: 20px;
-            transform: rotate(-2deg); 
-            filter: contrast(150%) brightness(120%);
-            z-index: 2;
-        }
+        /* LOGO SIZE - HERO (White Logo) */
+        .logo-img { max-width: 220px; height: auto; margin-bottom: 20px; transform: rotate(-2deg); filter: contrast(150%) brightness(120%); z-index: 2; }
+        
+        .tagline { font-size: 1.5rem; font-weight: bold; background-color: #111; color: #fff; padding: 8px 20px; transform: rotate(-2deg); display: inline-block; border: 3px solid white; box-shadow: 4px 4px 0px rgba(0,0,0,0.5); z-index: 2; }
 
-        .tagline {
-            font-size: 1.5rem;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            background-color: #111; 
-            color: #fff;
-            padding: 8px 20px;
-            transform: rotate(-2deg);
-            display: inline-block;
-            border: 3px solid white;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
-            z-index: 2;
+        /* BUTTONS & MOBILE FIXES */
+        .button-container { 
+            display: flex; 
+            gap: 25px; 
+            row-gap: 55px; /* High gap to prevent badge overlap on mobile */
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin-top: 40px; 
+            z-index: 2; 
         }
-
-        /* BUTTONS */
-        .button-container {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 40px;
-            z-index: 2;
-        }
-        .pnw-btn {
-            text-decoration: none;
-            padding: 15px 30px;
-            font-family: 'Arial Black', sans-serif;
-            text-transform: uppercase;
-            font-weight: bold;
-            min-width: 180px;
-            text-align: center;
-            display: inline-block;
-            transition: all 0.2s;
-            position: relative;
-        }
-
+        .pnw-btn { text-decoration: none; padding: 15px 30px; font-family: 'Arial Black', sans-serif; text-transform: uppercase; font-weight: bold; min-width: 180px; text-align: center; display: inline-block; transition: all 0.2s; position: relative; }
+        
         .btn-white { background: #fff; color: #000; border: 3px solid #fff; box-shadow: 6px 6px 0px #000; }
         .btn-white:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0px #000; }
 
-        /* THE PRINTWORKS BUTTON */
+        /* PULSE ANIMATION */
+        @keyframes softPulse { 
+            0% { transform: scale(1); } 
+            50% { transform: scale(1.05); } 
+            100% { transform: scale(1); } 
+        }
+
         .btn-red { 
             background: #d94e3b; 
             color: white; 
             border: 3px solid #d94e3b; 
-            box-shadow: 6px 6px 0px #000;
-            animation: softPulse 3s infinite;
+            box-shadow: 6px 6px 0px #000; 
+            animation: softPulse 2.5s infinite ease-in-out; 
         }
-        .btn-red:hover { background-color: #bf3d2b; transform: translate(2px, 2px); box-shadow: 4px 4px 0px #000; animation: none; }
+        .btn-red:hover { 
+            background-color: #bf3d2b; 
+            transform: translate(2px, 2px); 
+            box-shadow: 4px 4px 0px #000; 
+            animation: none; 
+        }
 
-        /* PRINTWORKS BRAND LABEL (Under Button) */
-        .printworks-badge {
-            position: absolute;
-            bottom: -28px;
-            right: -10px;
-            background: #000;
-            color: #fff;
-            font-size: 11px;
-            font-family: 'Arial Black', sans-serif;
-            padding: 4px 12px;
-            border: 2px solid #fff;
-            transform: rotate(2deg);
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
-            letter-spacing: 1.5px;
-            white-space: nowrap;
-            pointer-events: none;
-            z-index: 10;
-            transition: transform 0.2s ease;
+        /* PRINTWORKS BADGE */
+        .printworks-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
         }
-        .pnw-btn:hover + .printworks-badge {
+
+        .printworks-badge { 
+            position: absolute; 
+            bottom: -28px; 
+            right: -10px; 
+            background: #000; 
+            color: #fff; 
+            font-size: 11px; 
+            font-family: 'Arial Black', sans-serif; 
+            padding: 4px 12px; 
+            border: 2px solid #fff; 
+            transform: rotate(2deg); 
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.5); 
+            letter-spacing: 1.5px; 
+            white-space: nowrap; 
+            pointer-events: none; 
+            z-index: 10; 
+            transition: all 0.3s ease; 
+        }
+        
+        .btn-red:hover + .printworks-badge {
             transform: rotate(0deg) translateY(2px);
-        }
-
-        @keyframes softPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-            100% { transform: scale(1); }
+            background: #d94e3b;
         }
 
         .btn-outline { background: transparent; color: #fff; border: 3px solid #fff; box-shadow: 6px 6px 0px rgba(255,255,255,0.3); }
         .btn-outline:hover { background: #fff; color: #000; box-shadow: 4px 4px 0px #fff; transform: translate(2px, 2px); }
 
         /* CONTENT AREAS */
-        .content-section {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #f4f4f4;
-            background-image: radial-gradient(#ccc 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
+        .content-section { padding: 80px 20px; text-align: center; max-width: 900px; margin: 0 auto; background-color: #f4f4f4; background-image: radial-gradient(#ccc 1px, transparent 1px); background-size: 20px 20px; }
         .section-header { margin-bottom: 50px; border-bottom: 3px solid #000; padding-bottom: 20px; }
         
+        /* VISION LOGO SIZE - FIXED TO 80PX (SMALL) */
         .section-header img { 
-            max-width: 120px; 
+            max-width: 80px; 
             height: auto;
             margin-bottom: 20px; 
         }
@@ -209,7 +144,7 @@
         .content-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; margin-top: 0; color: #000; }
         .content-subtitle { font-size: 1.1rem; color: #000; max-width: 700px; margin: 0 auto; font-weight: bold; }
 
-        /* BOXES */
+        /* STRUCTURE BOXES */
         .structure-grid { display: flex; gap: 30px; margin-bottom: 60px; text-align: left; flex-wrap: wrap; }
         .structure-box { flex: 1; background: #fff; padding: 25px; border: 3px solid #000; box-shadow: 8px 8px 0px #000; min-width: 300px; }
         .structure-box h3 { font-family: 'Arial Black', sans-serif; text-transform: uppercase; font-size: 1.5rem; margin-top: 0; color: #000; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 15px; }
@@ -226,43 +161,23 @@
         /* NEWSLETTER */
         .newsletter-section { background: #d94e3b; color: white; padding: 40px; margin-top: 60px; border: 4px solid #000; box-shadow: 8px 8px 0px #000; text-align: center; }
         .newsletter-btn { background: #000; color: white; border: 3px solid #000; padding: 15px 30px; font-family: 'Arial Black', sans-serif; text-transform: uppercase; cursor: pointer; }
-        
-        .success-message {
-            display: none;
-            font-family: 'Arial Black', sans-serif;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            color: white;
-            background: #000;
-            padding: 20px;
-            border: 3px solid white;
-            margin-top: 20px;
-        }
+        .success-message { display: none; font-family: 'Arial Black', sans-serif; text-transform: uppercase; font-size: 1.5rem; color: white; background: #000; padding: 20px; border: 3px solid white; margin-top: 20px; }
 
-        /* APPROACH LIST */
-        .approach-box { margin-top: 60px; text-align: left; border: 2px solid #000; padding: 20px; background: #fff; box-shadow: 8px 8px 0px #000; }
-
-        /* FOOTER */
+        /* FOOTER & SOCIAL ANIMATIONS */
         .pnw-footer { background-color: #111; color: #fff; text-align: center; padding: 60px 20px; border-top: 8px solid #000; background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); position: relative; z-index: 101; }
-        .pnw-footer a { color: #fff; text-decoration: underline; font-weight: bold; }
         .social-icons { margin: 20px 0 30px 0; }
         .social-icon { 
-            display: inline-flex; 
-            justify-content: center; 
-            align-items: center; 
-            margin: 0 10px; 
-            color: #fff; 
-            background: #000; 
-            width: 50px; 
-            height: 50px; 
-            border-radius: 50%; 
-            border: 2px solid white; 
-            text-decoration: none; 
-            transition: all 0.2s;
+            display: inline-flex; justify-content: center; align-items: center; margin: 0 10px; 
+            color: #fff; background: #000; width: 50px; height: 50px; border-radius: 50%; 
+            border: 2px solid white; text-decoration: none; transition: all 0.2s ease-in-out; 
         }
         .social-icon svg { width: 24px; height: 24px; fill: currentColor; }
-        .social-icon:hover { color: #d94e3b; border-color: #d94e3b; transform: scale(1.1); }
-        .footer-logo { max-width: 100px; margin-bottom: 20px; filter: contrast(150%); }
+        .social-icon:hover { 
+            color: #d94e3b; 
+            border-color: #d94e3b; 
+            transform: scale(1.2); 
+        }
+        .footer-logo { max-width: 80px; margin-bottom: 20px; filter: contrast(150%); }
     </style>
     
     <script>
@@ -276,16 +191,15 @@
 
     <div class="noise-overlay"></div>
 
-    <!-- HERO SECTION -->
     <div class="hero-container">
-        <!-- Preview logo via GitHub raw -->
+        <!-- WHITE LOGO (Locked 220px) -->
         <img src="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLWhiteTrans.png" alt="PNW SOL Logo" class="logo-img">
         <div class="tagline">SERVANT OF LOVE</div>
 
         <div class="button-container">
             <a href="https://shop.pnwsol.com" class="pnw-btn btn-white">Shop Apparel</a>
             
-            <div style="position: relative; display: inline-block;">
+            <div class="printworks-wrapper">
                 <a href="https://printworks.pnwsol.com" class="pnw-btn btn-red">Custom Printing</a>
                 <div class="printworks-badge">PNW SOL PRINTWORKS</div>
             </div>
@@ -295,98 +209,71 @@
         <div class="hero-tear"></div>
     </div>
 
-    <!-- VISION SECTION -->
     <div id="vision" class="content-section">
-        
         <div class="section-header">
+            <!-- BLACK LOGO (Locked 80px) -->
             <img src="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLBlackTrans.png" alt="PNW SOL Logo">
             <h2 class="content-title">Vision for the SOL Center</h2>
-            <p class="content-subtitle">A MULTI-USE COMMUNITY SPACE WHERE CREATIVITY, MUSIC, AND SERVICE BRING PEOPLE TOGETHER ACROSS GENERATIONS.</p>
+            <p class="content-subtitle">A MULTI-USE COMMUNITY SPACE BRINGING PEOPLE TOGETHER ACROSS GENERATIONS.</p>
         </div>
 
         <div class="structure-grid">
             <div class="structure-box">
                 <h3>PNW SOL Enterprise LLC</h3>
-                <p><strong>(FOR-PROFIT)</strong> Houses multiple ventures that sustain the SOL Center, beginning with <span class="highlight">PNW SOL Printworks</span> and Slice of Love.</p>
+                <p><strong>(FOR-PROFIT)</strong> Sustains the center via <span class="highlight">Printworks</span> and Slice of Love.</p>
             </div>
-            
             <div class="structure-box non-profit">
                 <h3>Young Hearts</h3>
-                <p><strong>(NON-PROFIT)</strong> A servant-leadership youth group <strong>supported by</strong> PNW SOL that helps with events and outreach.</p>
+                <p><strong>(NON-PROFIT)</strong> Servant-leadership youth group supported by PNW SOL.</p>
             </div>
         </div>
 
         <div class="roadmap-title">The Roadmap</div>
-
-        <!-- PHASES -->
+        
         <div class="phase-container">
             <div class="phase-box">
                 <span class="phase-title">Phase 1 – PNW SOL Printworks</span>
                 <p>The foundation of our community presence. A fully operational screen-printing company and retail area.</p>
             </div>
-            
             <div class="phase-box">
                 <span class="phase-title">Phase 2 – Bathrooms & Light Kitchen</span>
                 <p>Securing full occupancy. Kitchen supports Adult Day Care (ADC) and Slice of Love pizza trailer.</p>
             </div>
-
             <div class="phase-box">
                 <span class="phase-title">Phase 3 – Coffee Shop</span>
                 <p>A welcoming space for the community and training ground for youth.</p>
             </div>
-
             <div class="phase-box" style="border: 4px solid #d94e3b;">
                 <span class="phase-title" style="color:#d94e3b; border-color:#d94e3b;">Phase 4 – Community Programs</span>
                 <p>Expansion into full community use: All-ages concerts, dances, and Love Songs program.</p>
             </div>
         </div>
 
-        <!-- BREVO NEWSLETTER SECTION -->
+        <!-- NEWSLETTER SECTION -->
         <div class="newsletter-section">
             <h2 style="font-family: 'Arial Black', sans-serif; font-weight: 900; text-transform: uppercase; margin: 0;">Join the Movement</h2>
             <p>Get updates on events and apparel drops.</p>
             
             <iframe name="hiddenFrame" style="display:none;"></iframe>
             
-            <!-- Replace the action URL with your unique Brevo form URL from your Brevo dashboard -->
-            <form id="signup-form" action="https://01b0e990.sibforms.com/serve/..." method="POST" target="hiddenFrame" onsubmit="showSuccess()" style="margin-top: 20px;">
+            <form id="signup-form" action="https://01b0e990.sibforms.com/serve/MUIFACHiJnXRLLiO7mh_CmdQGNE0fTdVeqT6TcMNKLdKdzKINtopW1ZNSrwLjiATB4bxqxUK7nTas0FFFsrekxA5fcZTZLsXrP1drZXbZ_fxMNQRzweS_1bL_HWqVhT0xVk1YQ0G86VkM_a0tT4Rna5RNnutoe-5DvhEpvPiI8GBD5hOAyooPAKgUE6jZuypLGCdkoYuBpBqXfLa6Q==" method="POST" target="hiddenFrame" onsubmit="showSuccess()" style="margin-top: 20px;">
                 <input type="email" name="EMAIL" placeholder="ENTER YOUR EMAIL" required style="padding: 10px; border: 3px solid #000; font-family: monospace; font-weight: bold; width: 60%; max-width: 300px;">
                 <button type="submit" class="newsletter-btn">Subscribe</button>
             </form>
             
             <div id="success-msg" class="success-message">WELCOME TO THE MOVEMENT.</div>
         </div>
-
-        <!-- APPROACH SECTION -->
-        <div class="approach-box">
-            <h3 style="font-family: 'Arial Black', sans-serif; text-transform: uppercase; margin-top: 0;">Our Approach</h3>
-            <ul style="line-height: 1.8; list-style-type: square; padding-left: 20px;">
-                <li><strong>Phased Growth:</strong> Each stage builds sustainably on the last.</li>
-                <li><strong>Community-Focused:</strong> Every element encourages creativity, connection, and service.</li>
-                <li><strong>Faith & Community Use:</strong> The space will not be used by PNW SOL on Sundays, opening possibilities for partnerships.</li>
-            </ul>
-        </div>
-
     </div>
 
-    <!-- FOOTER -->
     <div class="pnw-footer">
+        <!-- FOOTER LOGO (Locked 80px) -->
         <img src="https://raw.githubusercontent.com/PNWSOL/pnwsol-landing/main/PNWSOLWhiteTrans.png" class="footer-logo">
-        <p style="font-family: sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">
-            1140 Vandercook Way, Longview, WA 98632
-        </p>
-        
+        <p style="font-family: sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">1140 Vandercook Way, Longview, WA 98632</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/pnwsol/" target="_blank" class="social-icon" aria-label="Facebook">
-                <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.72 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/pnwsol/" target="_blank" class="social-icon" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-            </a>
+            <a href="https://www.facebook.com/pnwsol/" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.72 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z"/></svg></a>
+            <a href="https://www.instagram.com/pnwsol/" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
         </div>
-
         <a href="tel:+13602071553" style="font-size: 1.2rem; background: #d94e3b; color: white; padding: 5px 10px; text-decoration: none; font-weight: bold; font-family: sans-serif;">(360) 207-1553</a>
-        
         <p style="margin-top:30px; opacity: 0.6; font-size: 0.8rem; font-family: monospace;">&copy; 2024 PNW SOL. ALL RIGHTS RESERVED.</p>
     </div>
 
